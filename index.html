@@ -51,7 +51,7 @@
     <div class="row">
         <div class="col-xs-12 col-lg-6">
           <div class="col-xs-12 col-lg-6">
-              <div class="box">
+              <div class="working-image" id="working-image">
                 <img src="images/illustration-working.svg" alt="illustration-working" class="img">
               </div>
           </div>
@@ -67,11 +67,23 @@
     <div class="row" id="inputRow">
       <div class="col-xs-12 col-lg-12">
         <div class="box" id="inputBox">
-          <input type="link" class="inputLink" placeholder="Shorten a link here..."> <button class="button buttonSh">Shorten it!</button>
+          <input type="link" class="inputLink" placeholder="Shorten a link here..." id="txtLink">
+          <button class="button buttonSh" onclick="isEmpty()">Shorten it!</button>
         </div>
       </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    function isEmpty() {
+        txtfield = document.getElementById("txtLink").value;
+        if (txtfield.length == 0 || /^\s+$/.test(txtfield)) {
+          alert('El campo de texto esta vacio!');
+          return false;
+        }
+        return true;
+    }
+  </script>
 
   <div class="container" id="containerG">
 
@@ -86,7 +98,6 @@
     <div class="row" id="cardsRow">
       <div class="col-xs-12">
         <div class="card">
-          <p>
             <img src="images/icon-brand-recognition.svg" alt="brand-recognition">
             <h3 class="title3">Brand Recognition</h3>
             <br>
@@ -94,11 +105,10 @@
               Boost your brand recognition with each click. Generic links don’t 
               mean a thing. Branded links help instil confidence in your content.
             </h4>
-          </p>
         </div>
         <div class="line"></div>
         <div class="card">
-          <p>
+
             <img src="images/icon-detailed-records.svg" alt="detailed-records">
             <h3 class="title3">Detailed Records</h3>
             <br>
@@ -106,11 +116,11 @@
               Gain insights into who is clicking your links. Knowing when and where 
               people engage with your content helps inform better decisions. 
             </h4>   
-          </p>
+
         </div>
         <div class="line"></div>
         <div class="card">
-          <p>
+
             <img src="images/icon-fully-customizable.svg" alt="fully-customizable">
             <h4 class="title3">Fully Customizable</h4>
             <br>
@@ -118,7 +128,7 @@
               Improve brand awareness and content discoverability through customizable 
               links, supercharging audience engagement.
             </h4>
-          </p>
+
         </div>
       </div>
     </div>
@@ -131,7 +141,7 @@
 
   <div class="container" id="containerFooter">
       <a href="#home" class="footerLogo"><img src="images/logo.svg" alt="logo"></a>
-    <div class="card">
+    <div class="card" id="features">
       <p>Features</p>
       <ul>
         <li>Link Shortening</li>
@@ -139,7 +149,7 @@
         <li>Analytics</li>
       </ul>
     </div>
-    <div class="card">
+    <div class="card" id="pricing">
       <p>Resources</p>
       <ul>
         <li>Blog</li>
@@ -147,7 +157,7 @@
         <li>Support</li>
       </ul>
     </div>
-    <div class="card">
+    <div class="card" id="resources">
       <p>Company</p>
       <ul>
         <li>About</li>
@@ -156,7 +166,7 @@
         <li>Contact</li>
       </ul>
     </div>
-    <div class="card" id="social">
+    <div class="card">
       <a href="#facebook"><img src="images/icon-facebook.svg" alt="facebook"></a>
       <a href="#twitter"><img src="images/icon-twitter.svg" alt="twitter"></a>
       <a href="#instagram"><img src="images/icon-instagram.svg" alt="instagram"></a>
