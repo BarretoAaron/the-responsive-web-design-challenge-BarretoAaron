@@ -196,6 +196,10 @@
   margin-left: 10px;
 }
 
+#containerLinks .card{
+  align-self: center;
+}
+
 .card{
   background-color:white;
   font-weight: 500;
