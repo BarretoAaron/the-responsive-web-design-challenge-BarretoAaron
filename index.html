@@ -56,7 +56,7 @@
     <div class="row" id="inputRow">
       <div class="col-xs-12 col-lg-12">
         <div class="box" id="inputBox">
-          <input type="link" class="inputLink" placeholder="Shorten a link here..." id="txtLink" onblur="notEmpty()" onfocus="isEmpty()" onkeypress="notEmpty()">
+          <input type="link" class="inputLink" placeholder="Shorten a link here..." id="txtLink" onclick="notEmpty()" onblur="notEmpty()" onfocus="isEmpty()" onkeypress="notEmpty()">
           <div id="alertMessage" class="alertMessage"></div>
           <button class="button buttonSh" onclick="isEmpty(), requestShortedLinkA()">Shorten it!</button>
         </div>
@@ -211,9 +211,9 @@
           document.getElementById("txtLink").value = '';
           document.getElementById("containerLinks").insertAdjacentHTML("beforeend",
           "<div class='card'>"+
-            "<p>"+url+"</p>"+
-            "<p>"+`https://rel.ink/${response.data.hashid}`+"</p>"+
-            "<button class='button'>Copy</button>"+
+            "<p class='url'>"+url+"</p>"+
+            "<p class='surl'>"+`https://rel.ink/${response.data.hashid}`+"</p>"+
+            " <button class='button' onclick='copiedStyle()' id='copybtn'>Copy</button>"+
           "</div>"
           );
         })
@@ -221,6 +221,13 @@
         .catch(function (error) {
           console.log(error);
         });
+    }
+
+    function copiedStyle(){
+      var btnCopy =document.getElementById("copybtn");
+      document.getElementById("copybtn").innerHTML =
+       "Copied!";
+      btnCopy.classList.add("copied");
     }
   </script>
 </body>
