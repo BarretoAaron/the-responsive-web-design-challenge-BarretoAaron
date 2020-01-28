@@ -44,6 +44,38 @@
     margin: 12px 0px;
   }
 
+  .webnavbar{
+    display: none;
+  }
+
+  .webnavbar ul {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .webnavbar li a {
+    color:  hsl(0, 0%, 75%);
+    display: block;
+    font-weight: 700;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    
+  }
+
+  .webnavbar li a:hover{
+    color: hsl(260, 8%, 14%);
+  }
+
+  .webnavbar .LS{
+     margin-left: auto;
+  }
+
   body {
     font-family: 'Poppins';
     margin: 0;
@@ -60,7 +92,7 @@
   }
 
   .title1{
-    color: #34413D;
+    color: hsl(260, 8%, 14%);
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
@@ -120,7 +152,7 @@
   background-repeat: no-repeat;
   border-radius: 15px;
   left: 50%;
-  margin-top: -50px;
+  margin-top: 60px;
   padding-left: 15px;
   padding-right: 15px;
   position: absolute;
@@ -174,11 +206,6 @@
  #containerG{
     background-color: hsl(225, 33.3%, 95.3%);
     width: 100%;
- }
-
- #featuresRow{
-    display: flex;
-    text-align: center;
  }
 
  .title2{
@@ -358,8 +385,69 @@
   }
 
   @media (min-width: 768px){
+    .topnav{
+      display: none;
+    }
+
+    .webnavbar{
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+
     #imageRow{
       display: flex;
       flex-direction: row-reverse;
+      padding-bottom: 50px;
+    }
+
+     .sectiontitle1, .title1, .subtitle1{
+       text-align: left;
+     }
+
+     .title1{
+       font-size: 70px;
+     }
+
+    .buttonS{
+      border-radius: 35px;
+      font-size: 12px;
+      padding: 5px 20px 5px 20px;
+    }
+
+    #inputBox{
+      background-image: url('images/bg-shorten-desktop.svg');
+      display: flex;
+      flex-wrap: wrap;
+      height: 168px;
+      width: 1080px;
+    }
+
+    .inputLink{
+      align-self: center;
+      margin-bottom: unset;
+      margin-top: unset;
+      padding: 14px 250px;
+    }
+
+    .isEmpty{
+      align-self: center;
+      border-color: hsl(0, 87%, 67%);
+      border-width: 3px;
+      font-size: 17px;
+      font-weight: 500;
+      margin-bottom: unset;
+      margin-top: unset;
+      padding: 14px 250px;
+      text-align: left;
+    }
+
+    .alertMessage{
+      order:3;
+    }
+
+    .buttonSh{
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }

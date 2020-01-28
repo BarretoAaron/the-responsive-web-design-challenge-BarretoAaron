@@ -29,6 +29,15 @@
       </a>
     </div>
 
+    <ul class="webnavbar">
+        <li><img src="images/logo.svg" alt="logo"></li>
+        <li><a href="news.asp">Features</a></li>
+        <li><a href="contact.asp">Pricing</a></li>
+        <li><a href="about.asp">Resources</a></li>
+        <li class="LS"><a href="about.asp">Login</a></li>
+        <li><button class="button buttonS">Sign Up</button></li>
+    </ul>
+
     <div id="myLinks">
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
@@ -37,31 +46,27 @@
       <button class="button buttonS">Sign Up</button>
     </div>
 
-    <div class="row" id="imageRow">
-        <div class="col-xs-12 col-lg-6">
-          <div class="col-xs-12 col-lg-6">
-              <div class="working-image" id="working-image">
-                <img src="images/illustration-working.svg" alt="illustration-working" class="img">
-              </div>
-          </div>
-            <div class="box">
-              <h1 class="title1">More than just shorter links</h1>
-              <h4 class="subtitle1">Build your brand’s recognition and get detailed insights 
-                  on how your links are performing.</h4>
-              <button class="button buttonG">Get Started</button>
-            </div>
-        </div>
+    <div class="section" id="imageRow">
+      <div class="working-image" id="working-image">
+        <img src="images/illustration-working.svg" alt="illustration-working" class="img">
+      </div>
+    <div class="sectiontitle1">
+      <h1 class="title1">More than just shorter links</h1>
+      <h4 class="subtitle1">Build your brand’s recognition and get detailed insights 
+          on how your links are performing.</h4>
+      <button class="button buttonG">Get Started</button>
+    </div>
+        
     </div>
 
-    <div class="row" id="inputRow">
-      <div class="col-xs-12 col-lg-12">
-        <div class="box" id="inputBox">
-          <input type="link" class="inputLink" placeholder="Shorten a link here..." id="txtLink" onclick="notEmpty()" onblur="notEmpty()" onfocus="isEmpty()" onkeypress="notEmpty()">
-          <div id="alertMessage" class="alertMessage"></div>
-          <button class="button buttonSh" onclick="isEmpty(), requestShortedLinkA()">Shorten it!</button>
-        </div>
+    <div class="section" id="inputRow">
+      <div class="box" id="inputBox">
+        <input type="link" class="inputLink" placeholder="Shorten a link here..." id="txtLink" onclick="notEmpty()" onblur="notEmpty()" onfocus="isEmpty()" onkeypress="notEmpty()">
+        <div id="alertMessage" class="alertMessage"></div>
+        <button class="button buttonSh" onclick="isEmpty(), requestShortedLinkA()">Shorten it!</button>
       </div>
     </div>
+
   </div>
 
 
@@ -70,51 +75,47 @@
 
     </div>
 
-    <div class="row" id="featuresRow">
-      <div class="col-xs-12 col-lg-12">
-        <h3 class="title2">Advanced Statistics</h3>
-        <h4 class="subtitle2">Track how your links are performing across the web with
-          our advanced statistics dashboard.</h4>
-      </div>
+    <div class="section" id="featuresRow">
+      <h3 class="title2">Advanced Statistics</h3>
+      <h4 class="subtitle2">Track how your links are performing across the web with
+        our advanced statistics dashboard.</h4>
     </div>
 
-    <div class="row" id="cardsRow">
-      <div class="col-xs-12">
-        <div class="card">
-            <img src="images/icon-brand-recognition.svg" alt="brand-recognition">
-            <h3 class="title3">Brand Recognition</h3>
-            <br>
-            <h4 class="subtitle3">
-              Boost your brand recognition with each click. Generic links don’t 
-              mean a thing. Branded links help instil confidence in your content.
-            </h4>
-        </div>
-        <div class="line"></div>
-        <div class="card">
+    <div class="section" id="cardsRow">
+      <div class="card">
+        <img src="images/icon-brand-recognition.svg" alt="brand-recognition">
+        <h3 class="title3">Brand Recognition</h3>
+        <br>
+        <h4 class="subtitle3">
+          Boost your brand recognition with each click. Generic links don’t 
+          mean a thing. Branded links help instil confidence in your content.
+        </h4>
+      </div>
+      <div class="line"></div>
+      <div class="card">
 
-            <img src="images/icon-detailed-records.svg" alt="detailed-records">
-            <h3 class="title3">Detailed Records</h3>
-            <br>
-            <h4 class="subtitle3">
-              Gain insights into who is clicking your links. Knowing when and where 
-              people engage with your content helps inform better decisions. 
-            </h4>   
+        <img src="images/icon-detailed-records.svg" alt="detailed-records">
+        <h3 class="title3">Detailed Records</h3>
+        <br>
+        <h4 class="subtitle3">
+          Gain insights into who is clicking your links. Knowing when and where 
+          people engage with your content helps inform better decisions. 
+        </h4>   
 
-        </div>
-        <div class="line"></div>
-        <div class="card">
+      </div>
+      <div class="line"></div>
+      <div class="card">
 
-            <img src="images/icon-fully-customizable.svg" alt="fully-customizable">
-            <h4 class="title3">Fully Customizable</h4>
-            <br>
-            <h4 class="subtitle3">
-              Improve brand awareness and content discoverability through customizable 
-              links, supercharging audience engagement.
-            </h4>
-
-        </div>
+        <img src="images/icon-fully-customizable.svg" alt="fully-customizable">
+        <h4 class="title3">Fully Customizable</h4>
+        <br>
+        <h4 class="subtitle3">
+          Improve brand awareness and content discoverability through customizable 
+          links, supercharging audience engagement.
+        </h4>
       </div>
     </div>
+    
   </div>
 
   <div class="container" id="containerBoost">
@@ -228,6 +229,14 @@
       document.getElementById("copybtn").innerHTML =
        "Copied!";
       btnCopy.classList.add("copied");
+
+      var copyText = document.getElementById("copybtn").parentElement.id;
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
     }
   </script>
 </body>
