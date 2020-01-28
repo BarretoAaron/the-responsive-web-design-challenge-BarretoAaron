@@ -321,10 +321,14 @@
 }
 
   .buttonGB{
-    border-radius: 35px;
+    align-self: center;
+    border-radius: 45px;
     font-size: 20px;
-    margin: 18px 80px 90px 80px;
-    padding: 15px 50px 15px 50px;
+    height: 60px;
+    margin-bottom: 90px;
+    margin-top: 18px;
+    padding: 14px 18px;
+    width: 200px;
   }
 
   .buttonGB:hover{
@@ -406,13 +410,13 @@
      }
 
      .title1{
-       font-size: 70px;
+      font-size: 70px;
      }
 
     .buttonS{
       border-radius: 35px;
-      font-size: 12px;
-      padding: 5px 20px 5px 20px;
+      font-size: 16px;
+      padding: 8px 20px 8px 20px;
     }
 
     #inputBox{
@@ -427,7 +431,9 @@
       align-self: center;
       margin-bottom: unset;
       margin-top: unset;
-      padding: 14px 250px;
+      padding-top: 15px;
+      text-align: left;
+      width: 750px;
     }
 
     .isEmpty{
@@ -437,9 +443,9 @@
       font-size: 17px;
       font-weight: 500;
       margin-bottom: unset;
-      margin-top: unset;
-      padding: 14px 250px;
+      padding-top: 15px;
       text-align: left;
+      width: 750px;
     }
 
     .alertMessage{
@@ -450,4 +456,75 @@
       margin-bottom: 0;
       margin-top: 0;
     }
+
+    #containerLinks .card{
+      width: 1080px;
+      display: flex;
+      align-items: center;
+    }
+
+    .card .url{
+      border: none;
+    }
+
+    .card .surl{
+      margin-left: auto;
+    }
+    
+    #containerLinks .button{
+      width: 100px;
+      margin-left: 10px;
+    }
+
+    #featuresRow{
+      align-self: center;
+      width: 520px;
+    }
+
+    #cardsRow{
+      display: flex;
+      justify-content: center;
+    }
+
+    #cardsRow img{
+      left: 20%;
+    }
+
+    .line{
+      height: 8px;
+      width: 40px;
+      margin-left: -25px;
+      margin-right: -25px;
+      margin-top: 250px;
+      left: auto;
+      padding: 0;
+      position: static;
+      transform: none;
+    }
+
+    #containerBoost{
+      background-image: url('images/bg-boost-desktop.svg');
+      height: 250px;
+    }
+
+    .title4{
+      font-size: 38px;
+    }
+
+    #containerFooter{
+      flex-direction: row;
+    }
+
+    .footerLogo{
+      margin-left: 50px;
+    }
+
+    .card p{
+      text-align: left;
+    }
+
+    #containerFooter .card{
+      text-align: left;
+    }
+
   }
