@@ -1,4 +1,3 @@
-  /* Add a black background color to the top navigation */
  .topnav {
     background-color: white;
     display: flex;
@@ -21,11 +20,11 @@
    display: none;
    height: auto;
    margin-right: 18px;
-   margin-top: -290px;;
+   margin-top: -290px;
    padding-bottom: 30px;
    padding-top: 18px;
    position: absolute;
- }
+  }
 
   #myLinks a {
     color:white;
@@ -73,7 +72,7 @@
   }
 
   .webnavbar .LS{
-     margin-left: auto;
+    margin-left: auto;
   }
 
   body {
@@ -89,6 +88,8 @@
     justify-content: center;
     margin-top: 30px;
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .title1{
@@ -106,7 +107,7 @@
     font-weight: 500;
     margin-top: 0;
     text-align: center;
- }
+  }
 
   .button{
     background-color:hsl(180, 66%, 49%);
@@ -138,26 +139,26 @@
 
  .img{
     width: 160%;
- }
+  }
 
  #inputRow{
     align-items: center;
     display: flex;
- }
+  }
   
  #inputBox{
-  background-color: hsl(257, 27%, 26%);
-  background-image: url('images/bg-shorten-mobile.svg');
-  background-position: top right;
-  background-repeat: no-repeat;
-  border-radius: 15px;
-  left: 50%;
-  margin-top: 60px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: absolute;
-  transform: translate(-50%);
- }
+    background-color: hsl(257, 27%, 26%);
+    background-image: url('images/bg-shorten-mobile.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    left: 50%;
+    margin-top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    transform: translate(-50%);
+  }
 
  .inputLink{
     border-radius: 10px;
@@ -169,30 +170,30 @@
     margin-top: 20px;
     padding: 10px 5px 10px 5px;
     text-align: left;
- }
+  }
 
  .isEmpty{
-   border-color: hsl(0, 87%, 67%);
-   border-radius: 10px;
-   border-width: 3px;
-   font-size: 17px;
-   font-weight: 500;
-   margin-bottom: 10px;
-   margin-left: 10px;
-   margin-right: 10px;
-   margin-top: 20px;
-   padding: 10px 5px 10px 5px;
-   text-align: left;
- }
+    border-color: hsl(0, 87%, 67%);
+    border-radius: 10px;
+    border-width: 3px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 10px 5px 10px 5px;
+    text-align: left;
+  }
 
  .alertMessage{
-   color: hsl(0, 87%, 67%);
-   font-size: 12px;
-   font-style: italic;
-   font-weight: 500;
-   margin-left: 10px;
-   text-align: left;
- }
+    color: hsl(0, 87%, 67%);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    margin-left: 10px;
+    text-align: left;
+  }
 
  .buttonSh{
     align-self: center;
@@ -201,86 +202,87 @@
     margin-bottom: 20px;
     margin-top: 10px;
     padding: 14px 92px 14px 92px;
- }
+  }
 
  #containerG{
     background-color: hsl(225, 33.3%, 95.3%);
     width: 100%;
- }
+  }
 
  .title2{
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 10px;
     margin-top: 120px;
-}
+  }
 
-.subtitle2{
-  margin-top: 0;
-  color: hsl(0, 0%, 75%);
-  font-size: 17px;
-  font-weight: 500;
-  margin-left: 10px;
-}
+  .subtitle2{
+    margin-top: 0;
+    color: hsl(0, 0%, 75%);
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
 
-#containerLinks .card{
-  align-self: center;
-  border-radius: 5px;
-  font-size: 15px;
-  margin-bottom:-40px;
-  margin-top: 65px;
-  padding:14px 21px;
-}
+  #containerLinks .card{
+    align-self: center;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom:-40px;
+    margin-top: 65px;
+    padding:14px 21px;
+  }
 
-.card .url{
-  border-bottom: 1px solid hsl(0, 0%, 75%);
-  color: black;
-  font-weight: 500;
-  text-align: left;
-  margin-top: 3px;
-  margin-bottom: 5px;
-}
+  .card .url{
+    border-bottom: 1px solid hsl(0, 0%, 75%);
+    color: black;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
 
-.card .surl{
-  color: hsl(180, 66%, 49%);
-  font-weight: 500;
-  text-align: left;
-  margin-bottom: 8px;
-}
+  .card .surl{
+    color: hsl(180, 66%, 49%);
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 8px;
+    border: none;
+  }
 
-#containerLinks .button{
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: 700;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  width: 295px;
-}
+  #containerLinks .button{
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 295px;
+  }
 
-.copied{
-  background-color: hsl(257, 27%, 26%);
-}
+  .copied{
+    background-color: hsl(257, 27%, 26%);
+  }
 
-.card{
-  background-color:white;
-  font-weight: 500;
-  margin: 90px 25px 70px 25px;
-  padding: 40px 25px 40px 25px;
-  position: relative;
-  width: 280px;
-}
+  .card{
+    background-color:white;
+    font-weight: 500;
+    margin: 90px 25px 70px 25px;
+    padding: 40px 25px 40px 25px;
+    position: relative;
+    width: 280px;
+  }
 
-.title3{
-  font-size: 23px;
-  font-weight: 700;
-  margin-bottom: 0;
-}
+  .title3{
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
 
-.subtitle3{
-  color: hsl(0, 0%, 75%);
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 0;
+  .subtitle3{
+    color: hsl(0, 0%, 75%);
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 0;
   }
 
   #containerBoost{
@@ -318,7 +320,7 @@
     margin-bottom: 0;
     margin-top:100px;
     text-align: center;
-}
+  }
 
   .buttonGB{
     align-self: center;
@@ -397,38 +399,56 @@
       align-items: center;
       display: flex;
       flex-direction: row;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     #imageRow{
       display: flex;
       flex-direction: row-reverse;
-      padding-bottom: 50px;
+      padding-bottom: 104px;
     }
 
-     .sectiontitle1, .title1, .subtitle1{
-       text-align: left;
-     }
+    .working-image{
+      padding-right: 115px;
+      margin-left: 4px;
+    }
 
-     .title1{
-      font-size: 70px;
-     }
+    .sectiontitle1{
+      padding-left: 92px;
+    }
+
+    .sectiontitle1, .title1, .subtitle1{
+      text-align: left;
+    }
+
+    .title1{
+      font-size: 75px;
+    }
+
+    .subtitle1{
+      font-size: 22px;
+      padding-right: 30px;
+    }
 
     .buttonS{
       border-radius: 35px;
       font-size: 16px;
       padding: 8px 20px 8px 20px;
+      align-self: unset;
     }
 
     #inputBox{
       background-image: url('images/bg-shorten-desktop.svg');
       display: flex;
+      align-content: center;
       flex-wrap: wrap;
       height: 168px;
       width: 1080px;
     }
 
     .inputLink{
-      align-self: center;
       margin-bottom: unset;
       margin-top: unset;
       padding-top: 15px;
@@ -437,13 +457,13 @@
     }
 
     .isEmpty{
-      align-self: center;
       border-color: hsl(0, 87%, 67%);
       border-width: 3px;
       font-size: 17px;
       font-weight: 500;
       margin-bottom: unset;
       padding-top: 15px;
+      margin-top: unset;
       text-align: left;
       width: 750px;
     }
@@ -486,6 +506,20 @@
       justify-content: center;
     }
 
+    #cardsRow .card{
+      width: 280px;
+      height: 190px;
+      text-align: left;
+    }
+
+    .card1{
+      margin: 60px 25px;
+    }
+
+    .card3{
+      margin: 120px 25px;
+    }
+
     #cardsRow img{
       left: 20%;
     }
@@ -511,20 +545,33 @@
       font-size: 38px;
     }
 
+    .background-footer{
+      background-color: hsl(260, 8%, 14%);
+    }
+
     #containerFooter{
       flex-direction: row;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .footerLogo{
-      margin-left: 50px;
+      padding-right: 250px;
     }
 
     .card p{
       text-align: left;
     }
 
-    #containerFooter .card{
-      text-align: left;
+    .social{
+      padding-top: 50px !important;
     }
 
+    #containerFooter .card{
+      text-align: left;
+      width: 190px;
+      padding: 30px 0px 0px 0px;
+      margin: unset;
+    }
   }
