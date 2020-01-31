@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
   <link rel="stylesheet" type="text/css" href="indexStyle.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">  
   
@@ -71,9 +70,7 @@
 
 
   <div class="container" id="containerG">
-    <div class="container" id="containerLinks">
-
-    </div>
+    <div class="container" id="containerLinks"> </div>
 
     <div class="section" id="featuresRow">
       <h3 class="title2">Advanced Statistics</h3>
@@ -172,6 +169,18 @@
 
     var i=0;
 
+    window.onload = function displayLinks(){
+      var divLinks = document.getElementById("containerLinks");
+
+      if (divLinks.innerHTML == null || divLinks.innerHTML == " " || /^\s+$/.test(divLinks.innerHTML)){
+        if(sessionStorage.getItem('links')!=null){
+          let data = sessionStorage.getItem('links');
+          console.log(data);
+          divLinks.insertAdjacentHTML("beforeend", data);
+        }
+      }
+    }
+
     function myFunction() {
       var x = document.getElementById("myLinks");
       if (x.style.display === "block") {
@@ -213,21 +222,26 @@
 
       axios.post('https://rel.ink/api/links/', requestData)
         .then(function (response) {
-          console.log(`Here is your shorted link: https://rel.ink/${response.data.hashid}`)
           document.getElementById("txtLink").value = '';
-          document.getElementById("containerLinks").insertAdjacentHTML("beforeend",
+          containerLinks = document.getElementById("containerLinks");
+          containerLinks.insertAdjacentHTML("beforeend",
           "<div class='card'>"+
             "<p class='url'>"+url+"</p>"+
             "<input type='text' id='surl"+i+"' class='surl' value= '"+`https://rel.ink/${response.data.hashid}`+"'>"+
-            "<button class='button' onclick='copiedStyle(this.id)' id='copybtn'>Copy</button>"+
+            "<button class='button' onclick='copiedStyle(this.id)' id='copybtn"+i+"'>Copy</button>"+
           "</div>"
           );
+        if (containerLinks.innerHTML != null){
+          sessionStorage.setItem('links', document.getElementById("containerLinks").innerHTML);
+          console.log("Estoy dentro del request");
+          console.log(sessionStorage.getItem('links'));
+        }
         })
 
         .catch(function (error) {
           console.log(error);
         });
-
+        
         i++;
     }
 
@@ -239,7 +253,6 @@
       btnCopy.classList.add("copied");
 
       var shortened = btnCopy.previousSibling.id; 
-      debugger
       var copyText = document.getElementById(shortened);
       /* Select the text field */
       copyText.select();
