@@ -44,28 +44,25 @@
       <a href="#login" class="login">Login</a>
       <button class="button buttonS">Sign Up</button>
     </div>
+  </div>
 
-    <div class="section" id="imageRow">
-      <div class="working-image" id="working-image">
-        <img src="images/illustration-working.svg" alt="illustration-working" class="img">
-      </div>
-    <div class="sectiontitle1">
-      <h1 class="title1">More than just shorter links</h1>
-      <h4 class="subtitle1">Build your brand’s recognition and get detailed insights 
-          on how your links are performing.</h4>
-      <button class="button buttonG">Get Started</button>
-    </div>
-        
-    </div>
+  <div class="section imageRow" id="imageRow">
+  <img src="images/illustration-working.svg" alt="workingImage" class="workingImage">
+  <div class="sectiontitle1">
+    <h1 class="title1">More than just shorter links</h1>
+    <h4 class="subtitle1">Build your brand’s recognition and get detailed insights 
+        on how your links are performing.</h4>
+    <button class="button buttonG">Get Started</button>
+  </div>
+      
+  </div>
 
-    <div class="section" id="inputRow">
-      <div class="box" id="inputBox">
-        <input type="link" class="inputLink" placeholder="Shorten a link here..." id="txtLink" onclick="notEmpty()" onblur="notEmpty()" onfocus="isEmpty()" onkeypress="notEmpty()">
-        <div id="alertMessage" class="alertMessage"></div>
-        <button class="button buttonSh" onclick="isEmpty(), requestShortedLinkA()">Shorten it!</button>
-      </div>
+  <div class="section" id="inputRow">
+    <div class="box" id="inputBox">
+      <input type="link" class="inputLink" placeholder="Shorten a link here..." id="txtLink" onclick="notEmpty()" onblur="notEmpty()" onfocus="isEmpty()" onkeypress="notEmpty()">
+      <div id="alertMessage" class="alertMessage"></div>
+      <button class="button buttonSh" onclick="isEmpty(), requestShortedLinkA()">Shorten it!</button>
     </div>
-
   </div>
 
 
@@ -112,7 +109,6 @@
         </h4>
       </div>
     </div>
-    
   </div>
 
   <div class="container" id="containerBoost">
@@ -123,7 +119,7 @@
   <div class="background-footer">
     <div class="container" id="containerFooter">
         <a href="#home" class="footerLogo"><img src="images/logo.svg" alt="logo"></a>
-      <div class="card" id="features">
+      <div class="card features" id="features">
         <p>Features</p>
         <ul>
           <li>Link Shortening</li>
@@ -139,7 +135,7 @@
           <li>Support</li>
         </ul>
       </div>
-      <div class="card" id="resources">
+      <div class="card resources" id="resources">
         <p>Company</p>
         <ul>
           <li>About</li>
@@ -227,7 +223,7 @@
           containerLinks.insertAdjacentHTML("beforeend",
           "<div class='card'>"+
             "<p class='url'>"+url+"</p>"+
-            "<input type='text' id='surl"+i+"' class='surl' value= '"+`https://rel.ink/${response.data.hashid}`+"'>"+
+            "<input type='text' id='surl"+i+"' class='surl' value= '"+`https://rel.ink/${response.data.hashid}`+"' readonly>"+
             "<button class='button' onclick='copiedStyle(this.id)' id='copybtn"+i+"'>Copy</button>"+
           "</div>"
           );
@@ -248,8 +244,7 @@
     function copiedStyle(clicked){
       var btnCopy = document.getElementById(clicked);
 
-      document.getElementById(clicked).innerHTML =
-       "Copied!";
+      document.getElementById(clicked).innerHTML = "Copied!";
       btnCopy.classList.add("copied");
 
       var shortened = btnCopy.previousSibling.id; 
