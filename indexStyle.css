@@ -20,27 +20,26 @@
    display: none;
    height: auto;
    margin-right: 18px;
-   margin-top: -290px;
+   margin-top: 480px;
    padding-bottom: 30px;
    padding-top: 18px;
    position: absolute;
+   width: 90%;
   }
 
   #myLinks a {
     color:white;
     display: block;
-    float: left;
     font-size: 18px;
     font-weight: 700;
     padding-bottom: 18px;
     padding-top: 18px;
     text-decoration: none;
-    width: 100%;
   }
 
   .login{
     border-top: 1px solid hsl(0, 0%, 75%);
-    margin: 12px 0px;
+    margin: 12px 32px;
   }
 
   .webnavbar{
@@ -90,6 +89,12 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .workingImage{
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 140%
   }
 
   .title1{
@@ -237,9 +242,13 @@
     border-bottom: 1px solid hsl(0, 0%, 75%);
     color: black;
     font-weight: 500;
-    text-align: left;
-    margin-top: 3px;
     margin-bottom: 5px;
+    margin-top: 3px;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 280px;
   }
 
   .card .surl{
@@ -248,15 +257,15 @@
     text-align: left;
     margin-bottom: 8px;
     border: none;
+    width: 280px;
   }
 
   #containerLinks .button{
     border-radius: 10px;
     font-size: 18px;
-    font-weight: 700;
     padding-bottom: 10px;
     padding-top: 10px;
-    width: 295px;
+    width: 280px;
   }
 
   .copied{
@@ -290,6 +299,7 @@
     background-image: url(images/bg-boost-mobile.svg);
     background-position: top right;
     background-repeat: no-repeat;
+    height: 300px;
     margin-top: 0;
     width: 100%;
   }
@@ -382,7 +392,7 @@
   }
 
   svg:hover {
-    fill: #2acfcf;
+    fill: hsl(180, 66%, 49%);
   }
 
   .card a{
@@ -390,7 +400,7 @@
     padding-right: 10px;
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 1200px){
     .topnav{
       display: none;
     }
@@ -405,18 +415,22 @@
     }
 
     #imageRow{
-      display: flex;
-      flex-direction: row-reverse;
-      padding-bottom: 104px;
+      background-image: url('images/illustration-working.svg');
+      background-position-x: 116%;
+      background-position-y: 54px;
+      background-repeat: no-repeat;
+      padding-bottom: 100px;
+      padding-top: 30px;
     }
 
-    .working-image{
-      padding-right: 115px;
-      margin-left: 4px;
+    .workingImage{
+      display: none;
     }
 
     .sectiontitle1{
-      padding-left: 92px;
+      margin-top: -40px;
+      padding-left: 12%;
+      width: 44%;
     }
 
     .sectiontitle1, .title1, .subtitle1{
@@ -425,10 +439,13 @@
 
     .title1{
       font-size: 75px;
+      padding-top: 80px;
     }
 
     .subtitle1{
       font-size: 22px;
+      line-height: 34px;
+      margin-top: 2px;
       padding-right: 30px;
     }
 
@@ -440,41 +457,47 @@
     }
 
     #inputBox{
+      align-content: center;
       background-image: url('images/bg-shorten-desktop.svg');
       display: flex;
-      align-content: center;
       flex-wrap: wrap;
       height: 168px;
       width: 1080px;
     }
 
     .inputLink{
-      margin-bottom: unset;
-      margin-top: unset;
-      padding-top: 15px;
+      border: none;
+      font-size: 20px;
+      margin: 0 10px 0 auto;
+      padding-bottom: 20px;
+      padding-left: 33px;
+      padding-top: 20px;
       text-align: left;
-      width: 750px;
+      width: 68%;
     }
 
     .isEmpty{
       border-color: hsl(0, 87%, 67%);
       border-width: 3px;
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 500;
-      margin-bottom: unset;
-      padding-top: 15px;
-      margin-top: unset;
+      margin: 0 10px 0 auto;
+      padding-bottom: 20px;
+      padding-left: 33px;
+      padding-top: 20px;  
       text-align: left;
-      width: 750px;
+      width: 68%;
     }
 
     .alertMessage{
-      order:3;
+      position: absolute;
+      left: 55px;
+      top: 120px;
     }
 
     .buttonSh{
-      margin-bottom: 0;
-      margin-top: 0;
+      margin: 0 auto 0 10px;
+      padding: 20px 45px;
     }
 
     #containerLinks .card{
@@ -488,7 +511,10 @@
     }
 
     .card .surl{
+      font-size: 16px;
+      margin-bottom: 0;
       margin-left: auto;
+      width: 160px;
     }
     
     #containerLinks .button{
@@ -507,9 +533,9 @@
     }
 
     #cardsRow .card{
-      width: 280px;
       height: 190px;
       text-align: left;
+      width: 280px;
     }
 
     .card1{
@@ -525,15 +551,16 @@
     }
 
     .line{
+      display: block !important;
       height: 8px;
-      width: 40px;
+      left: auto;
       margin-left: -25px;
       margin-right: -25px;
       margin-top: 250px;
-      left: auto;
       padding: 0;
       position: static;
       transform: none;
+      width: 40px;
     }
 
     #containerBoost{
@@ -573,5 +600,55 @@
       width: 190px;
       padding: 30px 0px 0px 0px;
       margin: unset;
+    }
+  }
+
+  @media (min-width:768px){
+    .topnav{
+      display: none;
+    }
+
+    .webnavbar{
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #cardsRow{
+      display: flex;
+      justify-content: center;
+    }
+
+    .line{
+     display: none;
+    }
+
+    #containerBoost{
+      background-image: url('images/bg-boost-desktop.svg');
+      height: 250px;
+    }
+
+    .background-footer{
+      background-color: hsl(260, 8%, 14%);
+    }
+
+    #containerFooter{
+      flex-direction: row;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+      flex-wrap: wrap;
+    }
+
+    #containerFooter .card{
+      width: 190px;
+      padding: 30px 0px 0px 0px;
+    }
+
+    .features, .resources{
+      margin-left: auto !important;
     }
   }
