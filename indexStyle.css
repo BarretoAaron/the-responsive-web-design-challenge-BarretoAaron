@@ -24,23 +24,22 @@
    padding-bottom: 30px;
    padding-top: 18px;
    position: absolute;
+   width: 90%;
   }
 
   #myLinks a {
     color:white;
     display: block;
-    float: left;
     font-size: 18px;
     font-weight: 700;
     padding-bottom: 18px;
     padding-top: 18px;
     text-decoration: none;
-    width: 100%;
   }
 
   .login{
     border-top: 1px solid hsl(0, 0%, 75%);
-    margin: 12px 0px;
+    margin: 12px 32px;
   }
 
   .webnavbar{
